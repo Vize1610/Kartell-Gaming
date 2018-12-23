@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<meta>
+    <info name="LiveMapService" description="https://livemap.tam.moe/" author="Neta" version="1.0.3" async="true" />
+
+    <script src="LiveMap.dll" type="server" lang="compiled" />
+
+    <assembly ref="Newtonsoft.Json.dll" />
+    <assembly ref="NRestSharp.dll" />
+    <assembly ref="System.ValueTuple.dll" />
+    <assembly ref="System.Xml.Serialization.dll" />
+    <assembly ref="System.Xml.dll" />
+
+    <settings>
+        <setting name="server" value="lsrp" default="" description="Get it from neta" />
+        <setting name="secret" value="pEeIJngLrufEoXZPGQaWc6uZbAYBcwxeJxxGuZrS" default="" description="Get it from neta" />
+        <setting name="mappassword" value="" default="" description="The password to access the online map as a user(empty field means no password)" />
+        <setting name="showplayers" value="true" default="true" description="Show all player on the online map" />
+        <setting name="showvehicles" value="true" default="false" description="Show all vehicles on the online map" />
+        <setting name="showblips" value="false" default="false" description="Show all Serverside blips on the online map (doesn't impact custom blips, these always visible)" />
+		<setting name="displayvehnumberplates" value="true" default="false" description="Displays the number plates of the vehicles on the map" />
+        <setting name="showdebugmsg" value="false" default="false" description="Display debug messages in console" />
+    </settings>
+
+    <!-- Note: Custom blips are only visible on the online map and not at the server. -->
+  
+    <export function="AddCustomBlip" class="LiveMap" /> <!-- int AddCustomBlip(Vector3 position, string name = "", int sprite = 1) -->
+	<export function="RemoveCustomBlip" class="LiveMap" /> <!-- void RemoveCustomBlip(int id) -->
+    <export function="MoveCustomBlip" class="LiveMap" /> <!-- void MoveCustomBlip(int id, Vector3 position) -->
+    <export function="RenameCustomBlip" class="LiveMap" /> <!-- void RenameCustomBlip(int id, string name) -->
+    <export function="ClearAllCustomBlips" class="LiveMap" /> <!-- void ClearAllCustomBlips() -->
+    <export function="SetPassword" class="LiveMap" /> <!-- void SetPassword(string newPassword) -->
+    <export function="ShowPlayers" class="LiveMap" /> <!-- void ShowPlayers(bool show) -->
+    <export function="ShowVehicles" class="LiveMap" /> <!-- void ShowVehicles(bool show) -->
+    <export function="ShowBlips" class="LiveMap" /> <!-- void ShowBlips(bool show) -->
+</meta>
