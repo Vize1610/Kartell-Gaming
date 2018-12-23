@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<meta>
+  <info name="[EAC] Extended Admin Commands" author="Sudonym" type="script" />
+  <script src="EnhancedAdminCommands.dll" type="server" lang="compiled" />
+  
+  <settings>
+    <setting name="debugmode" value="false" default="false" description="Toggles debug messages" />
+    <setting name="vehicleconfig" value="0" default="0" description="Specifies the vehicle spawn method (see README.md)" />
+    <setting name="aclgroupname" value="Admin" default="Admin" description="Name of your ACL group" />
+  </settings>
+</meta>
