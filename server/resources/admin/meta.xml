@@ -1,0 +1,7 @@
+<meta>
+    <info name="Administration Utilities" author="Guadmaz" type="script" />        
+    <script src="admin.cs" type="server" lang="csharp" />
+    <script src="user.cs" type="server" lang="csharp" />
+
+    <!-- <acl src="acl.xml" /> -->
+</meta>

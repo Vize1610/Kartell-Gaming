@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<acl xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <group name="Everyone">
+    <acl name="Default" />
+    <object name="User.*" />
+    <object name="resources.user" />
+  </group>
+  <group name="Administrator">
+    <acl name="Administrator" />
+  </group>
+    <group name="Supporter">
+    <acl name="Supporter" />
+  </group>
+    <group name="Guide">
+    <acl name="Guide" />
+  </group>
+  <group name="Moderator">
+    <acl name="Moderator" />
+  </group>
+    <group name="Gamedesign">
+    <acl name="Gamedesign" />
+  </group>
+  <group name="Admin">
+    <acl name="Admin" />
+    <object name="resources.*" />
+	<object name="User.JasperRemy" password="12345" />
+    <object name="User.ollii12387" password="123456" />
+    <object name="User.ttgvirus" password="2019" />
+	<object name="User.Markxiii0505" password="2018" />
+    <object name="User.OMG-ITS-NEHNICYT" password="2016" />
+	<object name="User.DenZuDemTiX" password="2017" />
+ </group>
+  <acl name="Default">
+    <right name="command.stop" access="false" />
+    <right name="command.start" access="false" />
+    <right name="command.blackout" access="false" />
+  </acl>
+  <acl name="Administrator">
+    <right name="command.settime" access="true" />
+    <right name="command.stop" access="false" />
+    <right name="command.start" access="false" />
+    <right name="command.blackout" access="false" />
+  </acl>
+  <acl name="Supporter">
+    <right name="command.settime" access="true" />
+    <right name="command.blackout" access="false" />
+  </acl>
+  <acl name="Guide">
+    <right name="command.settime" access="true" />
+    <right name="command.blackout" access="false" />
+  </acl>
+  <acl name="Moderator">
+    <right name="command.blackout" access="true" />
+  </acl>
+  <acl name="Gamedesign">
+    <right name="command.settime" access="true" />
+    <right name="command.blackout" access="true" />
+  </acl>
+  <acl name="Admin">
+    <right name="command.stop" access="true" />
+    <right name="command.start" access="true" />
+    <right name="command.restart" access="true" />
+  </acl>
+</acl>
